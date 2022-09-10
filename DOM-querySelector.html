@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM querySelector</title>
+    <style>
+        article{
+            border: 1px solid tomato;
+            border-radius: 10px;
+            margin: 15px 5px;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <article>
+                <h2 class="article" id="first-article">Article-1</h2>
+                <p class="author">Author-1</p>
+                <p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore architecto voluptatem esse deserunt ab quisquam commodi voluptate cupiditate aperiam pariatur, corrupti voluptas maxime dolorum sequi repudiandae hic recusandae sed autem!</p>
+            </article>
+            <article class="highlight">
+                <h2 class="article">Article-2</h2>
+                <p class="author">Author-2</p>
+                <p class="description">Sapiente hic, fuga esse neque officia necessitatibus dignissimos quos aliquid ipsum nemo accusamus eaque rerum deleniti! Blanditiis provident nihil voluptates sequi, odit natus neque perspiciatis amet animi, fuga quia eos?</p>
+            </article>
+            <article class="highlight">
+                <h2 class="article">Article-3</h2>
+                <p class="author">Author-3</p>
+                <p class="description">Voluptas sequi voluptatibus minima? Beatae dolore incidunt illo adipisci laboriosam, culpa veritatis maiores excepturi cum blanditiis ipsum a expedita? Nam quis earum perspiciatis, accusamus facere nesciunt accusantium expedita nostrum quas!</p>
+            </article>
+            <article>
+                <h2 class="article">Article-4</h2>
+                <p class="author">Author-4</p>
+                <p class="description">Ea voluptatibus temporibus culpa vel in autem fugiat aut optio? Quod voluptates qui cum sit molestiae. Maiores assumenda quibusdam ad aut, voluptatum magnam sint ullam rem ex et? Fuga, nulla.</p>
+            </article>
+        </section>
+    </main>
+
+
+    <script>
+        document.getElementById('first-article').setAttribute('title', 'Best seller')
+        var author = document.querySelectorAll('.highlight h2');
+        for(let i = 0; i<author.length; i++){
+            let element = author[i];
+            element.style.color = '#fff';
+            element.style.backgroundColor = 'darkred';
+            element.style.padding = '10px';
+            element.style.display = 'inline-block';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore DOM</title>
+
+
+    <style>
+        article{
+            border: 1px solid tomato;
+            border-radius: 10px;
+            margin: 15px 5px;
+            padding: 15px;
+        }
+    </style>
+    
+</head>
+<body>
+    <main>
+        <section>
+            <h2>Exploring DOM</h2>
+            <h3 id="first">DOM : Document Object Model</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, architecto.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </section>
+
+        <section>
+            <article>
+                <h3>article-1</h3>
+                <p class="author">author-1</p>
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga animi amet ab assumenda, neque nobis quo aperiam suscipit exercitationem est obcaecati explicabo debitis laudantium, quasi commodi nihil libero repellat deleniti.</p>
+            </article>
+            <article>
+                <h3>article-2</h3>
+                <p class="author">author-2</p>
+                <p class="description">Quisquam, voluptates omnis nihil quis praesentium sunt iure eveniet molestiae distinctio amet obcaecati neque dolorum numquam. Odio vitae accusamus veniam, architecto unde quasi modi alias! Dolore aliquam non dolorem ex.</p>
+            </article>
+            <article>
+                <h3>article-3</h3>
+                <p class="author">author-3</p>
+                <p class="description">Quisquam reprehenderit, perferendis temporibus, cum quidem accusamus assumenda expedita eos minima suscipit vero qui fugiat, deleniti labore consequatur. Consectetur dicta temporibus perferendis ullam autem. Veniam at temporibus dolor impedit necessitatibus!</p>
+            </article>
+        </section>
+    </main>
+
+
+    <script>
+        var heading = document.getElementsByTagName('h3');
+        for(let i = 1; i<heading.length; i++){
+            let headingElement = heading[i];
+            headingElement.style.color = 'darkred';
+            headingElement.innerHTML = "Article no: " + i;
+        }
+        var author = document.getElementsByClassName('author');
+        for(let i = 0; author.length; i++){
+            let element = author[i];
+            element.style.fontWeight = 600;
+            element.style.fontSize = '16px';
+            element.style.color = 'lightblue';
+            element.innerHTML = 'Lekhok-' + (i+1);
+        }
+        
+    </script>
+</body>
+</html>
